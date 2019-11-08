@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+				border: 0;
+			}
+			.aa {
+				margin: 0px auto;
+				width: 1000px;
+				height: 1500px;
+				background: #000000;
+				box-sizing: border-box;
+				display: block;
+			}
+		
+			.aa1 {
+				display: flex;
+				align-items: center;
+				width: 1000px;
+				height: 100px;
+				background: #FFFFFF;
+			}
+
+			.aa2 {
+				width: 1000px;
+				height: 524px;
+				background: #0000FF;
+
+			}
+
+			.aa3 {
+				width: 1000px;
+				height: 242px;
+				background: #FFFFFF;
+				display: flex;
+			}
+
+			.aa4 {
+				width: 1000px;
+				height: 302px;
+				background: #FFFFFF;
+			}
+
+			.aa5 {
+				width: 1000px;
+				height: 251px;
+				background: #e5e5e5;
+				display: inline-flex;
+			}
+
+			.aa6 {
+				width: 1000px;
+				height: 81px;
+				background: #FFFFFF;
+				display: inline-flex;
+			}
+
+			.img1 {
+				width: 249px;
+				height: 27px;
+			}
+
+			.bb1 {
+				width: 250px;
+				height: 28px;
+				margin: 0 auto 0 auto;
+				display: inherit;
+			}
+
+			.search {
+				width: 222px;
+				height: 28px;
+				border: 1px solid #e5e5e5;
+				background: #f1f1f1;
+				outline: none;
+				padding-left: 20px;
+				position: absolute;
+			}
+
+			.btn {
+				width: 28px;
+				height: 27px;
+				margin-left: 200px;
+				margin-top: 1px;
+				background-repeat: no-repeat;
+				/* 大小 */
+				background-size: 28px 28px;
+				/* 位置 */
+				background-position: center;
+				background-image: url(img/img2/search.png);
+				border: none;
+				position: absolute;
+				cursor: pointer;
+			}
+
+			.u1 {
+				width: 1000px;
+				height: 60px;
+				background: #2f2f2f;
+			}
+
+			.u1 li {
+				list-style: none;
+		    	float: left;
+				width: 125px;
+				font-size: 20px;
+				color: white;
+				border-right: 1px solid #4b4b4b;
+				text-align: center;
+				line-height: 59px;
+				box-sizing: border-box;
+			}
+			
+			.u5 {
+				width:300px;
+				height: 15px;
+				
+			}
+			
+			.u5 li {
+				padding-left: 5px;
+				padding-right: 5px;
+				font: 12px "Microsoft YaHei";
+				list-style: none;
+				float: left;
+			
+				color: black;
+				border-right: 1px solid #4b4b4b;
+				text-align: center;
+				line-height: 15px;
+				background: #FFFFFF;
+				box-sizing: border-box;
+			}
+			.u5 li:last-child {
+				border-right: none;
+			}
+
+			a {
+				color: white;
+				text-decoration: blink;
+			}
+			.ff1{
+				padding-top: 25px;
+				padding-left: 20px;
+			}
+			.ff2{
+				padding-top: 25px;
+				padding-left: 40px;
+			}
+			.fsp{
+				font: 12px "Microsoft YaHei";
+			}
+			
+			.u1 li:last-child {
+				border-right: none;
+			}
+
+			.u1 li:hover {
+				background: #00FFFF;
+
+			}
+
+			.bb22 {
+				width: 1000px;
+				height: 464px;
+				background-image: url(img/img2/banner.png);
+			}
+
+			.cc3 {
+				margin-top: 20px;
+				width: 500px;
+				height: 242px;
+				border: 1px solid #FFFFFF;
+			}
+			.h1 {
+				font: 20px "Microsoft YaHei";
+				padding-left: 25px;
+		
+
+			}
+			.h2 {
+				margin-top: 20px;
+				font: 20px "Microsoft YaHei";
+				padding-left: 20px;
+				padding-bottom: 30px;
+				margin-bottom: 0px;
+			}
+			.h3 {
+				font: 20px "Microsoft YaHei";
+				padding-left: 20px;
+				padding-bottom: 30px;
+				margin-top: 20px;
+				margin-bottom: 0px;
+			}
+			.h4 {
+				padding-top: 40px;
+				font: 20px "Microsoft YaHei";
+				padding-left: 23px;
+				padding-bottom: 20px;
+				margin-bottom: 0px;
+			}
+			.h5 {
+				border-bottom: 1px solid #666666;
+				font: 20px "Microsoft YaHei";
+				padding-bottom: 10px;
+				margin-bottom: 0px;
+			}
+			.h6 {
+				border-bottom: 1px solid #666666;
+				font: 20px "Microsoft YaHei";
+				padding-bottom: 10px;
+				margin-bottom: 0px;
+			}
+			.h7 {
+				border-bottom: 1px solid #666666;
+				font: 20px "Microsoft YaHei";
+				padding-bottom: 10px;
+				margin-bottom: 0px;
+			}
+			
+
+			.u2 {
+				margin-top: 20px;
+				padding-left: 45px;
+			}
+
+
+			.u2 li {
+				font: 14px "microsoft yahei";
+				color: #242424;
+				padding-top: 4px;
+				padding-bottom: 5px;
+			}
+			
+			
+
+			.s1 {
+				padding-left: 25px;
+				font: 14px "microsoft yahei";
+				color: #242424;
+			}
+
+			.s2 {
+				padding-left: 25px;
+				font: 14px "microsoft yahei";
+				color: #242424;
+			}
+
+			.s3 {
+				padding-left: 25px;
+				font: 14px "microsoft yahei";
+				color: #242424;
+
+			}
+
+			.s4 {
+				padding-left: 25px;
+				font: 14px "microsoft yahei";
+				color: #242424;
+
+			}
+
+			.s5 {
+				padding-left: 25px;
+				font: 14px "microsoft yahei";
+				color: #242424;
+
+			}
+
+			.s6 {
+				padding-left: 25px;
+				font: 14px "microsoft yahei";
+				color: #242424;
+
+			}
+
+			.ss1 {
+				margin-left: 79px;
+				font: 14px "microsoft yahei";
+				color: #242424;
+
+			}
+
+			.ss2 {
+				margin-left: 26px;
+				font: 14px "microsoft yahei";
+				color: #242424;
+
+			}
+
+			.ss3 {
+				margin-left: 148px;
+				font: 14px "microsoft yahei";
+				color: #242424;
+
+			}
+
+			.ss4 {
+				margin-left: 134px;
+				font: 14px "microsoft yahei";
+				color: #242424;
+
+			}
+
+			.ss5 {
+				margin-left: 22px;
+				font: 14px "microsoft yahei";
+				color: #242424;
+
+			}
+
+			.ss6 {
+				margin-left: 17px;
+				font: 14px "microsoft yahei";
+				color: #242424;
+
+			}
+
+			.cc33 {
+
+				width: 242px;
+				height: 242px;
+				background: #f1f1f1;
+			}
+			.p1{
+				margin-top: 20px;
+				margin-left: 20px;
+				font: 16px "microsoft yahei";
+				color: #242424;
+			}
+			.p2{
+				margin-left: 20px;
+				font: 16px "microsoft yahei";
+				color: #242424;
+			}
+			.p3{
+				margin-top: 25px;
+				margin-left: 20px;
+				margin-right: 1px;
+				font: 14px "microsoft yahei";
+				color: #242424;
+			}
+			.p4{
+				margin-top: 20px;
+				margin-left: 23px;
+				font: 14px "microsoft yahei";
+				color: #242424;
+			}
+			.p5{
+				margin-left: 23px;
+				font: 14px "microsoft yahei";
+				color: #242424;
+			}
+			.cc333{
+				width: 259px;
+				height: 242px;
+				background: #fafafa;
+			}
+			.img2{
+				margin-left: 23px;
+				margin-bottom: 50px;
+			}
+			.img3{
+				margin-left:85px;
+				margin-top: 20px;
+			}
+			.dd4{
+				width: 1000px;
+				height: 241px;
+				background: #FFFFFF;
+				display: flex;
+			}
+			.ddd1{
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			.img4{
+			}
+			.dp1{
+				width: 210px;
+				height: 136px;
+				font: 12px "microsoft yahei";
+				color: #242424;
+			}
+			.ee1{
+				width: 431px;
+				padding-top: 20px;
+				padding-left: 20px;
+				height: 230px;
+				background: #e5e5e5;
+			}
+			.ee2{
+				padding-top: 20px;
+				padding-left: 50px;
+				width: 154px;
+				height: 230px;
+				background: #e5e5e5;
+			}
+			.ee3{
+				padding-top: 20px;
+				padding-left: 50px;
+				width: 254px;
+				height: 230px;
+				background: #e5e5e5;
+			}
+			
+			.u3{
+				margin-top: 25px;
+				padding-left: 60px;
+			}
+			.u4{
+				margin-top: 25px;
+				padding-left: 20px;
+			}
+			.u3 li{
+				font: 14px "microsoft yahei";
+				color: #000000;
+				padding-top: 5px;
+				list-style-image: url(img/img2/item_icon.png);
+			}
+			.u4 li{
+				font: 14px "microsoft yahei";
+				color: #000000;
+				padding-top: 5px;
+				list-style-image: url(img/img2/item_icon.png);
+			}
+			.eee1{
+				width: 431px;
+				display:flex ;
+				background: #e5e5e5;
+			}
+			.eee2{
+				width: 154px;
+				display:flex ;
+				background: #e5e5e5;
+			}
+			.img5{
+				padding-top: 25px;
+				padding-left: 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 最外层的模块 -->
+		<div class="aa">
+			<div class="aa1">
+				<img src="img/img2/logo.png" alt="logo" class="img1">
+				<div style="width: 480px;"></div>
+				<div class="bb1">
+					<input type="text" class="search" placeholder="SEARCH...">
+					<input type="text" class="btn">
+				</div>
+			</div>
+			<div class="aa2">
+				<div class="bb2">
+					<ul class="u1">
+						<li><a href="#">集团介绍</a></li>
+						<li><a href="#">产品中心</a></li>
+						<li><a href="#">卧龙市场</a></li>
+						<li><a href="#">技术研发</a></li>
+						<li><a href="#">国际合作</a></li>
+						<li><a href="#">投资者关系</a></li>
+						<li><a href="#">新闻资讯</a></li>
+						<li><a href="#">人力资源</a></li>
+					</ul>
+				</div>
+				<div class="bb22"></div>
+			</div>
+			<div class="aa3">
+				<div class="cc3">
+					<h3 class="h1">新闻资讯</h3>
+					<ul class="u2">
+						<li>
+							陈建成董事长出席ATB集团召开年度销售大会
+							<span class="ss1">2013-07-30</span>
+						</li>
+						<li>
+							中国电器工业协会分马力点机分会在卧龙召开理事长...
+							<span class="ss2">2013-07-30</span>
+						</li>
+						<li>
+							陈建成董事长访问中国驻德大使馆
+							<span class="ss3">2013-07-30</span>
+						</li>
+						<li>
+							企业文化是企业持续经营的关键因素
+							<span class="ss4">2013-07-30</span>
+						</li>
+						<li>
+							陈建成监事长在ATB集团2013年销售会议上发表重要...
+							<span class="ss5">2013-07-30</span>
+						</li>
+						<li>
+							喜迎七一唱响卧龙 年轻力量激发企业持久活力 卧龙举...
+							<span class="ss6">2013-07-30</span>
+						</li>
+					</ul>
+				</div>
+				<div class="cc33">
+					<h3 class="h2">卧龙介绍</h3>
+					<span class="p1">公司成立于1984年，</span>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;
+					
+					<span class="p2">经过近30年的发展</span>
+					
+					<p class="p3">已成为电气制造,房地产开发和金融投资三业并举的综合性跨国...</p>
+				</div>
+				<div class="cc333">
+					<h3 class="h3">人才招聘</h3>
+					<span class="p4">培养一流人才,铸造一流的工程</span>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<span class="p5">实现员工与企业的共同发展</span>
+					
+					
+					<img src="img/img2/more.png"  class="img2"/>
+					<img src="img/img2/flower.png" class="img3"/>
+				</div>
+			</div>
+			<div class="aa4">
+					<h3 class="h4">卧龙市场</h3>
+					<div class="dd4">
+						<div class="ddd1">
+							<img src="img/img2/news1.png" class="img4">
+							<p class="dp1">交通轨道：由于主要采用电器牵引，而且轮轨摩擦阻力较小，与公共...</p>
+						</div>
+						
+						
+						<div class="ddd1">
+							<img src="img/img2/news2.png" class="img4">
+							<p class="dp1">节能环保：由于不断上涨的能源消耗和我们的专业知识，维护可持续...</p>
+						</div>
+						
+						<div class="ddd1">
+							<img src="img/img2/news3.png" class="img4">
+							<p class="dp1">航空与船舰：如果你是在公海行驶，你需要确保你的船只的电力系统...</p>
+						</div>
+						
+						<div class="ddd1">
+							<img src="img/img2/news4.png" class="img4">
+							<p class="dp1">石油、天然气及采矿：在市场中的安全性，可靠性，效率和最短的停机...</p>
+						</div>
+						
+					</div>
+			</div>
+			<div class="aa5">
+				<div class="ee1">
+					<h3 class="h5">产品中心</h3>
+					<div class="eee1">
+						<ul class="u4">
+							<li>汽车电机</li>
+							<li>日用电机</li>
+							<li>特种电机</li>
+							<li>大功率电机</li>
+							<li>电工设备</li>
+						</ul>
+						
+						<ul class="u3">
+							<li>工业驱动和自动化</li>
+							<li>高压变频和系统集成</li>
+							<li>混泥土搅拌机</li>
+							<li>电动车辆</li>
+						</ul>
+						<ul class="u3">
+							<li>电池电源</li>
+							<li>输变电设备</li>
+							<li>楼盘信息</li>
+							<li>金融产品</li>
+					
+						</ul>
+						
+					</div>
+					
+				</div>
+				<div class="ee2">
+					<h3 class="h6">技术研发</h3>
+					<div class="eee2">
+						<ul class="u4">
+							<li>科技力量</li>
+							<li>先进设备</li>
+							<li>研发创新</li>
+							<li>工艺流程</li>
+						</ul>
+						</div>
+				</div>
+				<div class="ee3">
+					<h3 class="h7">营销网络</h3>
+					<div class="eee3">
+						<img src="img/img2/china.png" class="img5">	
+					</div>
+				</div>
+			</div>
+			<div class="aa6">
+				<div class="ff1">
+					<ul class="u5">
+						<li>网站地图</li>
+						<li>联系我们</li>
+						<li>关注卧龙</li>
+						<li>采购系统入口</li>
+					</ul>
+				</div>
+				<div class="ff2">
+					<span class="fsp">COPYTIGHT&copy;2013卧龙控股集团&nbsp;版权所有&nbsp;浙ICP备06005901号&nbsp;技术支持：博采互动&nbsp;&nbsp;分享到：</span>
+					<img src="img/img2/share2.png" class="fimg" >
+					<img src="img/img2/share2.png" class="fimg" >
+					<img src="img/img2/share2.png" class="fimg" >
+					<img src="img/img2/share2.png" class="fimg" >
+					<img src="img/img2/share2.png" class="fimg" >
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
