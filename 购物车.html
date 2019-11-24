@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h3>我的购物车</h3>
+		<table rules="rows" border="1px" height="120px" cellspacing="0" id="testTbl">
+			<tr align="center">
+				<td width="100px" height="40px" >
+						<input type="checkbox" name="checkBoxAll" onclick="checkAll()" id="checkBoxAll" />
+					<font size="3" color="mediumblue">
+						<b>全选 </b>
+					</font>
+				
+				</td>
+				<td width="300px">商品</td>
+				<td width="150px">单价</td>
+				<td width="150px">数量</td>
+				<td width="150px">小计</td>
+				<td width="150px">操作</td>
+
+			</tr>
+			<tr align="center">
+				<td height="40px">
+					<input type="checkbox" name="commodity">
+				</td>
+				<td>
+					<font color="darkgreen" size="4px">
+						<b>斗罗大陆之龙王传说漫画</b>
+					</font>
+				</td>
+				<td>
+					45.80
+				</td>
+				<td>
+					<input type="button" value="-" onclick="jian()">
+					<input style="width:20px" type="text" value="0" name="shoppnamber" id="shoppnameber1">
+					<input type="button" value="+"  onclick="jia()">
+				</td>
+				<td>
+					
+					<font size="3" color="red">
+						<span id="xiaoji-1">0.00</span>元
+					</font>
+				</td>
+				<td onclick="del(this)">
+					<font size="3" color="mediumblue">
+						<b>删除</b>
+					</font>
+				</td>
+			</tr>
+			<tr align="center">
+				<td height="40px">
+					<input type="checkbox" name="commodity">
+				</td>
+				<td>
+					<font color="darkgreen" size="4px">
+						<b>斗破苍穹</b>
+					</font>
+				</td>
+				<td>
+					49.80
+				</td>
+				<td>
+					<input type="button" value="-" onclick="jian2()">
+					<input style="width:20px" type="text" value="0" name="shoppnamber" id="shoppnameber2">
+					<input type="button" value="+" onclick="jia2()">
+				</td>
+				<td>
+					<font size="3" color="red">
+						<span id="xiaoji-2">0.00</span>元
+					</font>
+				</td>
+				<td onclick="del(this)">
+					<font size="3" color="mediumblue">
+						<b>删除</b>
+					</font>
+				</td>
+			</tr>
+			<tr align="center">
+				<td height="40px">
+					<input type="checkbox" name="commodity">
+				</td>
+				<td>
+					<font color="darkgreen" size="4px">
+						<b>唐人街探案3</b>
+					</font>
+				</td>
+				<td>
+					45.20
+				</td>
+				<td>
+					<input type="button" value="-" onclick="jian3()">
+					<input style="width:20px" type="text" value="0" name="shoppnamber" id="shoppnameber3">
+					<input type="button" value="+" onclick="jia3()">
+				</td>
+				<td>
+					<font size="3" color="red">
+						<span id="xiaoji-3">0.00</span>元
+					</font>
+				</td>
+				<td onclick="del(this)">
+					<font size="3" color="mediumblue">
+						<b>删除</b>
+					</font>
+				</td>
+			</tr>
+			<tr align="center">
+				<td height="40px">
+					<input type="checkbox" name="commodity">
+				</td>
+				<td>
+					<font color="darkgreen" size="4px">
+						<b>完美世界</b>
+					</font>
+				</td>
+				<td>
+					45.00
+				</td>
+				<td>
+					<input type="button" value="-" onclick="jian4()">
+					<input style="width:20px" type="text" value="0" name="shoppnamber" id="shoppnameber4">
+					<input type="button" value="+" onclick="jia4()">
+				</td>
+				<td>
+					<font size="3" color="red">
+						<span id="xiaoji-4">0.00</span>元
+					</font>
+				</td>
+				<td onclick="del(this)">
+					<font size="3" color="mediumblue">
+						<b>删除</b>
+					</font>
+				</td>
+			</tr>
+		</table>
+
+		<div style="width: 900px;">
+			<div style="float: right;">
+				已选择&nbsp;<span style="font-size: 30px;" id="allNumber">0</span>&nbsp;件商品&nbsp;&nbsp;&nbsp;&nbsp;
+				总计:
+					<font size="5" color="red"><span id="allmoneny">0.00</span></font>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="submit" value="提交订单" style="background:darkorange; height: 30px; color: white;" />
+			</div>
+			<div>
+
+				 
+				<script type="text/javascript" src="购物车.js">
+					
+				</script>
+	</body>
+</html>
