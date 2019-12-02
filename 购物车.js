@@ -204,5 +204,5 @@ function del(o){
 	//获取表格
 	var t=document.getElementById("testTbl");
 	//删除当前行
-	t.deleteRow(o.parentNode.rowIndex)
+	t.deleteRow(o.parentNode.rowIndex);
 }
