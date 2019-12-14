@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.content .logo {
+				width: 176px;
+				height: 44px;
+				float: left;
+				padding-top: 30px;
+				margin-right: 40px;
+			}
+
+			.content .menuitem {
+				display: block;
+				position: relative;
+				padding-top: 45px;
+				padding-left: 7px;
+				padding-right: 7px;
+				padding-bottom: 7px;
+				line-height: 16px;
+				float: left;
+				font-size: 14px;
+				color: #b8b6b4;
+				text-transform: uppercase;
+				text-decoration: none;
+			}
+
+			.menuitem:hover {
+				color: white;
+			}
+
+	
+			div#global_action_menu {
+				vertical-align: top;
+				position: absolute;
+				right: 0px;
+				top: 6px;
+				text-outline: 6px;
+				height: 21px;
+				font-size: 11px;
+				color: #e5e4dc;
+			}
+
+			.game_content {
+				width: 100%;
+				height: 750px;
+				background: saddlebrown;
+			}
+
+			.game_content .players {
+				width: 900px;
+				height: 340px;
+				margin: 0 auto;
+				border: 4px solid rgb(44, 61, 93);
+				border-radius: 4px;
+				margin-bottom: 10px;
+				box-shadow: 2px 2px 11px 1px rgba(0, 0, 0, 0.5);
+			}
+
+			.selects {
+				height: 220px;
+				width: 500px;
+				margin: 0 auto;
+			}
+
+			.selects>div {
+				height: 200px;
+				display: inline-block;
+				padding: 10px;
+				background: rgb(182, 113, 79);
+				margin-right: 10px;
+				border-radius: 3px;
+				cursor: pointer;
+				box-shadow: 2px 2px 11px 1px rgba(0, 0, 0, 0.5);
+			}
+
+			.selects>div:hover {
+				background: rgb(239, 52, 52);
+			}
+
+			.selects>div>img {
+				height: 200px;
+				display: inline;
+			}
+
+			.game_content .title {
+				color: white;
+				margin: 0 auto;
+				display: block;
+				text-align: center;
+				font-size: 20px;
+				padding: 10px 20px;
+			}
+
+			.check_place {
+				width: 200px;
+				margin: 0 auto;
+				margin-top: 20px;
+			}
+
+			.check_btn {
+				width: 200px;
+				height: 50px;
+				text-align: center;
+				font-size: 20px;
+				letter-spacing: 10px;
+				font-weight: bold;
+				color: white;
+				background: rgb(248, 199, 70);
+				border-radius: 2px;
+				cursor: pointer;
+			}
+
+			.check_btn:hover {
+				background: rgb(239, 52, 52);
+			}
+
+			.left_player {
+				position: absolute;
+				top: 200px;
+				left: 50px;
+				width: 200px;
+				height: 400px;
+			}
+
+			.right_player {
+				position: absolute;
+				top: 200px;
+				right: 50px;
+				width: 200px;
+				height: 400px;
+			}
+
+			div>.name {
+				color: white;
+				font-size: 50px;
+				margin: 0 auto;
+				display: block;
+				text-align: center;
+				letter-spacing: 10px;
+			}
+
+			div .score {
+				color: white;
+				font-size: 30px;
+				display: inline-block;
+				text-align: center;
+			}
+
+			div>.points {
+				margin: 0 auto;
+				width: 60px;
+				margin-top: 20px;
+			}
+
+			div .point {
+				/* background:rgb(239, 52, 52); */
+				font-size: 30px;
+				color: rgb(239, 52, 52);
+				display: inline-block;
+				text-align: center;
+			}
+
+			.player1 {
+				width: 205px;
+				float: left;
+				margin-top: 20px;
+				margin-left: 30px;
+			}
+
+
+
+			.player2 {
+				width: 200px;
+				float: right;
+				margin-top: 20px;
+				margin-right: 30px;
+			}
+
+			.players .vs {
+				width: 200px;
+				height: 200px;
+				text-align: center;
+				margin: 0 auto;
+				background: cyan;
+				margin-top: 80px;
+				border-radius: 100px;
+				box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.5);
+			}
+
+			.vs span {
+				color: rgb(248, 199, 70);
+				font-size: 150px;
+				text-shadow: #000000;
+			}
+
+			.players img {
+				height: 300px;
+			}
+
+			.card.focus {
+				background: rgb(239, 52, 52);
+			}
+
+	
+		</style>
+		<script src="jquery-3.4.1.min.js"></script>
+	</head>
+	<body>
+	
+		<div class="game_content">
+			<div class="players">
+				<div class="player1">
+					<img id="pc" src="img/b0.png" alt="">
+				</div>
+
+				<div class="player2">
+					<img id="player" src="img/b0.png" alt="">
+				</div>
+
+				<div class="vs">
+					<span id="jieguo">Vs</span>
+				</div>
+			</div>
+			<div class="left_player">
+			
+
+			</div>
+
+			<div class="right_player">
+				
+			</div>
+			<div class="selects">
+				<div class="shitou card" selectType="0">
+					<img src="img/b0.png" alt="">
+				</div>
+				<div class="jiandao card" selectType="1">
+					<img src="img/b1.png" alt="">
+				</div>
+				<div class="bu card" selectType="2">
+					<img src="img/b2.png" alt="">
+				</div>
+			</div>
+			<div class="check_place">
+				<button class="check_btn">确认</button>
+			</div>
+
+		</div>
+		<script>
+			$(function(){
+						var $cards = $('.card');
+						var $checkBtn = $('.check_btn');
+						var $jieguo = $('#jieguo');
+
+						var $pc = $('#pc');
+						var $player = $('#player');
+						
+						var pcScore = $('.left_player .score');
+						var playerScore = $('.right_player .score');
+
+						for (var i = 0; i < $cards.length; i++) {
+							let card = $($cards[i]);
+							card.on('click', function() {
+								$(this).addClass('focus');
+								$(this).siblings().removeClass('focus');
+							});
+						}
+
+						var showHand = function(player, index) {
+							switch (index) {
+								case 0:
+									player.attr("src", "img/b0.png");
+									break;
+								case 1:
+									player.attr("src", "img/b2.png");
+									break;
+								case 2:
+									player.attr("src", "img/b1.png");
+									break;
+							}
+						}
+
+						var checkWinner = function(mySelcet, pcSelect) {
+							if (mySelcet == pcSelect) {
+								$jieguo.text('平');
+								$jieguo.css('color', "rgb(239,52,52)");
+							} else {
+								if ((mySelcet != 2 && mySelcet < pcSelect) || mySelcet == 2 && pcSelect == 0) {
+									$jieguo.text('胜');
+									$jieguo.css('color', "rgb(239,52,52)");
+									pcScore.html(parseInt(pcScore.html())+1);
+								} else {
+									$jieguo.text('负');
+									$jieguo.css('color', "rgb(239,52,52)");
+									playerScore.html(parseInt(playerScore.html())+1);
+								}
+							}
+						}
+
+						var gameReset = function() {
+							$player.attr("src", "img/b0.png.png");
+							$pc.attr("src", "img/b0.png.png");
+							$jieguo.text('Vs');
+							$jieguo.css('color', "rgb(239,52,52)");
+						}
+
+						var pcSelect = function() {
+							var index = parseInt(Math.random() * 3);
+							showHand($pc, index);
+							console.log(index);
+							return index;
+						}
+
+						$checkBtn.on('click', function() {
+								var $focus = $('.focus');
+								console.log($focus);
+								if ($focus.length == 0) {
+									alert("请先选择一张卡片");
+								} else {
+									var type = $focus.attr("selectType");
+									showHand($player, parseInt(type));
+								}
+
+								checkWinner(type, pcSelect());
+
+								// setTimeout(gameReset, 5000);
+							});
+
+						});
+		</script>
+	</body>
+</html>

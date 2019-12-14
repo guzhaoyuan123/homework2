@@ -94,7 +94,7 @@
 						<td>1011</td>
 						<td>张三</td>
 						<td>108563</td>
-						<td><button>删除</button></td>
+						<td><button class="del">删除</button></td>
 					</tr>
 				</table>
 			</div>
@@ -119,25 +119,26 @@
 <script>
 	$(function() {
 		
-		
 		$("#btn").on("click", function() {
 			
 			var name=$("#xingming").val();
 			var xuehao=$("#xuehao").val();
 			var tel=$("#dianhua").val();
 			
-			var $tb = $("<tr><td>"+xuehao+"</td><td>"+name+"</td><td>"+tel+"</td><td><button>删除</button></td></tr>");
+			var $tb = $("<tr><td>"+xuehao+"</td><td>"+name+"</td><td>"+tel+"</td><td><button class='del'>删除</button></td></tr>");
 			$("table").append($tb);
 		});
 		
 		
-			$("table").delegate("tr","click",function(){
-			 	$(this).remove();
+			$("table").delegate(".del","click",function(){
+			 	$(this).parent().parent().remove();
 		});
 		
 		
 		// 问题 为什么将点击事件设成按钮就不可以执行删除整行,
 		// 将事件设成tr就可以删除
+		
+		// 解决:.parent()方法
 
 	});
 </script>
